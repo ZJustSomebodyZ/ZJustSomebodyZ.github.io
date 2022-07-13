@@ -22,7 +22,8 @@ nav {
     background-color: #1f1f1f;
     display: flex;
     font-size: .9rem;
-    width: 100vw
+    width: 100vw;
+    align-items: center;
 }
 
 nav>div {
@@ -39,7 +40,8 @@ header>.show-more {
     font-family: "Catamaran";
     font-size: .9rem;
     text-decoration: none;
-    color: inherit
+    color: inherit;
+    max-width: max-content;
 }
 
 header {
@@ -61,8 +63,8 @@ h2 {
     margin: inherit
 }
 
-header>.show-more {
-    padding: 5rem 0;
+.show-more {
+    padding: 3rem 0;
     font-size: 1.2rem;
 }
 
@@ -72,12 +74,24 @@ p {
     text-decoration: none;
 }
 
-@media (max-width: 360px) {
+
+/*making it responsive*/
+@media (max-width: 360px),
+(max-height: 345px) {
     h1 {
         font-size: 4rem;
     }
 
     h2 {
         font-size: 1rem;
+    }
+
+    .show-more {
+        padding: 1rem 0;
+        font-size: .8rem;
+    }
+
+    .show-more>span {
+        font-size: 24px;
     }
 }
