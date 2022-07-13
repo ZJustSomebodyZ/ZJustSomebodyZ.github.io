@@ -1,22 +1,63 @@
 html,
 body {
     margin: 0;
-    padding: 0
+    padding: 0;
+    scroll-behavior: fallback;
 }
 
-#pfp {
-    padding: 0;
-    float: left
+h1 {
+    font-size: 5rem;
+    font-family: "Libre Franklin";
+    margin: inherit
 }
+
+h2 {
+    font-size: 2rem;
+    font-family: "Catamaran";
+    margin: inherit
+}
+
+header {
+    color: #d2d2d2
+}
+
+nav {
+    background-color: #1f1f1f;
+    padding: .5rem 0;
+    display: flex;
+    gap: 1.5rem;
+    font-size: 50%;
+}
+
+button {
+    font-size: inherit;
+}
+
+#titleSubtitle {
+    margin: 0;
+    padding: 10% 0;
+    text-align: center;
+    background-image: url("/img/start-backg.svg");
+    background-size: cover;
+}
+
+p,
+a {
+    font-family: "Nobile"
+}
+
 
 button {
     background: none;
     color: inherit;
-    border: 5px red ridge;
-    border-collapse: collapse;
+    border: none;
     margin: 0;
     padding: 0;
     font-size: 1.1rem;
     cursor: pointer;
     outline: inherit;
+}
+
+nav {
+    font-size: 0;
 }
