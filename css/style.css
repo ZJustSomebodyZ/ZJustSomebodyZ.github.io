@@ -27,6 +27,7 @@ nav {
 
 nav>div {
     padding: .5rem;
+    transition: .2s;
 }
 
 nav>div:hover {
