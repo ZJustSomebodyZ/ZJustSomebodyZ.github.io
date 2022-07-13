@@ -21,21 +21,31 @@ header {
 nav {
     background-color: #1f1f1f;
     display: flex;
-    gap: 1.5rem;
-    font-size: 50%;
-}
-
-nav>a {
     font-size: .9rem;
-    padding: .5rem 0;
+    width: 100vw
 }
 
-.title {
+nav>div {
+    padding: .5rem;
+}
+
+nav>div:hover {
+    background-color: #2f2f2f;
+}
+
+nav a,
+header>.show-more {
+    font-family: "Catamaran";
+    font-size: .9rem;
+    text-decoration: none;
+    color: inherit
+}
+
+header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 94vh;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 h1 {
@@ -52,11 +62,21 @@ h2 {
 
 header>.show-more {
     padding: 5rem 0;
+    font-size: 1.2rem;
 }
 
-p,
-a {
+p {
     font-family: "Nobile";
     color: inherit;
     text-decoration: none;
+}
+
+@media (max-width: 360px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
 }
