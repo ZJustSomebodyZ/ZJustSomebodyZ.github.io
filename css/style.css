@@ -1,8 +1,41 @@
+:root {
+    --light-font-color: #ddd;
+    --dark-background-color: #1f1f1f;
+}
+
 html,
 body {
     margin: 0;
     padding: 0;
-    scroll-behavior: fallback;
+    scroll-behavior: smooth;
+}
+
+header {
+    color: var(--light-font-color);
+    background-image: url("/img/start-backg.svg");
+    background-size: cover;
+    text-align: center;
+    height: 100vh;
+}
+
+nav {
+    background-color: #1f1f1f;
+    display: flex;
+    gap: 1.5rem;
+    font-size: 50%;
+}
+
+nav>a {
+    font-size: .9rem;
+    padding: .5rem 0;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 94vh;
+    justify-content: space-around;
 }
 
 h1 {
@@ -17,47 +50,13 @@ h2 {
     margin: inherit
 }
 
-header {
-    color: #d2d2d2
-}
-
-nav {
-    background-color: #1f1f1f;
-    padding: .5rem 0;
-    display: flex;
-    gap: 1.5rem;
-    font-size: 50%;
-}
-
-button {
-    font-size: inherit;
-}
-
-#titleSubtitle {
-    margin: 0;
-    padding: 10% 0;
-    text-align: center;
-    background-image: url("/img/start-backg.svg");
-    background-size: cover;
+header>.show-more {
+    padding: 5rem 0;
 }
 
 p,
 a {
-    font-family: "Nobile"
-}
-
-
-button {
-    background: none;
+    font-family: "Nobile";
     color: inherit;
-    border: none;
-    margin: 0;
-    padding: 0;
-    font-size: 1.1rem;
-    cursor: pointer;
-    outline: inherit;
-}
-
-nav {
-    font-size: 0;
+    text-decoration: none;
 }
