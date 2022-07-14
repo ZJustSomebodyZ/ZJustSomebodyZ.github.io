@@ -1,11 +1,11 @@
-* {
-    scrollbar-width: thin;
-    scrollbar-base-color: ;
-}
-
 :root {
     --light-font-color: #ddd;
     --dark-background-color: #1f1f1f;
+}
+
+html {
+    scrollbar-width: thin;
+    scrollbar-;
 }
 
 html,
@@ -73,6 +73,10 @@ h2 {
 
 p {
     font-family: "Nobile";
+}
+
+img {
+    width: 15%
 }
 
 /*making it responsive*/
