@@ -1,11 +1,24 @@
 :root {
     --light-font-color: #ddd;
     --dark-background-color: #1f1f1f;
+    --dark-background-color-hover: #2f2f2f;
+
+    --title-font: "Libre Franklin";
+    --subtitle-font: "Catamaran";
+    --normal-font: "Nobile";
+
+    --title-size: 5rem;
+    --subtitle-size: 2rem;
+    --button-size: .9rem;
+    --sub-subtitle-size: 1.5rem;
 }
 
 html {
     scrollbar-width: thin;
-    scrollbar-;
+}
+
+body {
+    background-color: var(--dark-background-color);
 }
 
 html,
@@ -14,6 +27,8 @@ body {
     padding: 0;
     scroll-behavior: smooth;
 }
+
+/*HEADER ↓↓↓*/
 
 header {
     color: var(--light-font-color);
@@ -29,9 +44,9 @@ header {
 }
 
 nav {
-    background-color: #1f1f1f;
+    background-color: var(--dark-background-color);
     display: flex;
-    font-size: .9rem;
+    font-size: var(--button-size);
     align-items: center;
     width: 100vw;
     max-width: 100%
@@ -43,43 +58,56 @@ nav>div {
 }
 
 nav>div:hover {
-    background-color: #2f2f2f;
+    background-color: var(--dark-background-color-hover);
 }
 
-nav a,
-header>.show-more {
-    font-family: "Catamaran";
-    font-size: .9rem;
-    text-decoration: none;
-    color: inherit;
-}
-
-h1 {
-    font-size: 5rem;
-    font-family: "Libre Franklin";
+header h1 {
+    font-size: var(--title-size);
+    font-family: var(--title-font);
     margin: inherit;
 }
 
-h2 {
-    font-size: 2rem;
-    font-family: "Catamaran";
+header h2 {
     margin: inherit;
 }
 
 .show-more {
-    padding: 3rem 0;
-    font-size: 1.2rem;
+    margin: 3rem 0;
+    transition: .2s
 }
 
-p {
-    font-family: "Nobile";
+/*HEADER ↑↑↑*/
+
+/*MAIN ↓↓↓*/
+
+/*MAIN ↑↑↑*/
+
+/*GENERAL ↓↓↓*/
+
+.normal-text {
+    color: var(--light-font-color);
+    font-family: var(--normal-font);
 }
 
-img {
-    width: 15%
+.button {
+    color: var(--light-font-color);
+    font-size: var(--button-size);
+    font-family: var(--subtitle-font);
+    text-decoration: none;
 }
 
-/*making it responsive*/
+.subtitle {
+    color: var(--light-font-color);
+    font-size: var(--subtitle-size);
+    font-family: var(--subtitle-font);
+}
+
+.sub-subtitle {
+    color: var(--light-font-color);
+    font-size: var(--sub-subtitle-size);
+    font-family: var(--subtitle-font);
+}
+
 @media (max-width: 360px),
 (max-height: 345px) {
     h1 {
@@ -87,6 +115,10 @@ img {
     }
 
     h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
         font-size: 1rem;
     }
 
