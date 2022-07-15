@@ -1,12 +1,12 @@
 :root {
     --light-font-color: #ddd;
     --dark-background-color: #1f1f1f;
-    --dark-background-color-hover: #2f2f2f;
 
     --title-font: "Libre Franklin";
     --subtitle-font: "Catamaran";
     --normal-font: "Nobile";
 
+    --normal-size: .9rem;
     --title-size: 5rem;
     --subtitle-size: 2rem;
     --button-size: .9rem;
@@ -15,6 +15,7 @@
 
 html {
     scrollbar-width: thin;
+    scroll-padding-top: 2.8rem
 }
 
 body {
@@ -40,15 +41,17 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 nav {
-    background-color: var(--dark-background-color);
+    background-color: #110320;
     display: flex;
     font-size: var(--button-size);
     align-items: center;
     width: 100%;
+    position: fixed;
+    height: 1.8rem;
 }
 
 nav>div {
@@ -57,7 +60,7 @@ nav>div {
 }
 
 nav>div:hover {
-    background-color: var(--dark-background-color-hover);
+    background-color: #270a46;
 }
 
 header h1 {
@@ -80,24 +83,41 @@ header h2 {
 /*e*/
 
 /*MAIN ↓↓↓*/
-
 #about-me {
-    padding: 1rem;
-    height: 100vh;
+    height: calc(100vh - 1.8rem);
 }
 
 #about-me-div {
     flex-grow: 0;
     display: flex;
-    gap: 1rem;
-    background-image: linear-gradient(45deg, rgb(58, 12, 163) 0%, rgb(67, 97, 238) 100%);
-    background-attachment: fixed;
+    gap: 2rem;
+    background-color: #222;
     padding: 1rem;
+    margin: 1rem;
     border-radius: 5px;
 }
 
-#about-me-div h3 {
+#about-me img {
+    border-radius: 3px;
+    box-shadow: 8px 8px #181818;
+}
+
+#about-me h2 {
+    margin: 2rem 2rem 1rem
+}
+
+#about-me h3 {
     margin-top: 1rem;
+}
+
+#about-me p {
+    line-height: 1.3rem;
+}
+
+#about-me .text-div {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: nowrap column
 }
 
 /*MAIN ↑↑↑*/
@@ -105,6 +125,7 @@ header h2 {
 /*GENERAL ↓↓↓*/
 
 .normal-text {
+    font-size: var(--normal-size);
     color: var(--light-font-color);
     font-family: var(--normal-font);
 }
