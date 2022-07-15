@@ -48,8 +48,7 @@ nav {
     display: flex;
     font-size: var(--button-size);
     align-items: center;
-    width: 100vw;
-    max-width: 100%
+    width: 100%;
 }
 
 nav>div {
@@ -79,6 +78,7 @@ header h2 {
 /*HEADER ↑↑↑*/
 
 /*MAIN ↓↓↓*/
+
 
 /*MAIN ↑↑↑*/
 
