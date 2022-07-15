@@ -79,7 +79,24 @@ header h2 {
 
 /*MAIN ↓↓↓*/
 
-/*Here'll be the main stuff's css*/
+#about-me {
+    padding: 1rem;
+    height: 100vh;
+}
+
+#about-me-div {
+    flex-grow: 0;
+    display: flex;
+    gap: 1rem;
+    background-image: linear-gradient(45deg, rgb(58, 12, 163) 0%, rgb(67, 97, 238) 100%);
+    background-attachment: fixed;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+#about-me-div h3 {
+    margin-top: 1rem;
+}
 
 /*MAIN ↑↑↑*/
 
@@ -111,15 +128,15 @@ header h2 {
 
 @media (max-width: 360px),
 (max-height: 345px) {
-    h1 {
+    header h1 {
         font-size: 4rem;
     }
 
-    h2 {
+    header h2 {
         font-size: 1.5rem;
     }
 
-    h3 {
+    header h3 {
         font-size: 1rem;
     }
 
@@ -130,5 +147,11 @@ header h2 {
 
     .show-more>span {
         font-size: 24px;
+    }
+}
+
+@media (max-width: 650px) {
+    #about-me>div {
+        flex-direction: column;
     }
 }
