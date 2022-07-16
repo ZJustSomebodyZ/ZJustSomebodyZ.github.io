@@ -63,6 +63,11 @@ nav>div:hover {
     background-color: #270a46;
 }
 
+.title {
+    opacity: 0;
+    animation: 1s appearing .5s forwards
+}
+
 header h1 {
     font-size: var(--title-size);
     font-family: var(--title-font);
@@ -74,8 +79,10 @@ header h2 {
 }
 
 .show-more {
+    opacity: 0;
     margin: 3rem 0;
-    transition: .2s
+    transition: .2s;
+    animation: 1s appearing .5s forwards
 }
 
 /*HEADER ↑↑↑*/
@@ -108,7 +115,6 @@ header h2 {
     display: flex;
     justify-content: space-around;
     flex-flow: column;
-    gap: 1rem;
 }
 
 #about-me h2 {
@@ -175,5 +181,13 @@ header h2 {
 @media (max-width: 1000px) {
     #about-me-div {
         flex-direction: column;
+    }
+}
+
+@keyframes appearing {
+    from {}
+
+    to {
+        opacity: 1;
     }
 }
