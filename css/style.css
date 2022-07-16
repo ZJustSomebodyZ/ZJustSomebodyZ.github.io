@@ -84,40 +84,45 @@ header h2 {
 
 /*MAIN ↓↓↓*/
 #about-me {
-    height: calc(100vh - 1.8rem);
+    min-height: calc(100vh - 1.8rem);
 }
 
 #about-me-div {
-    flex-grow: 0;
     display: flex;
     gap: 2rem;
     background-color: #222;
     padding: 1rem;
     margin: 1rem;
     border-radius: 5px;
+
+    justify-content: center;
 }
 
 #about-me img {
     border-radius: 3px;
     box-shadow: 8px 8px #181818;
+    max-width: 80vw;
+    align-self: center
 }
 
 #about-me h2 {
-    margin: 2rem 2rem 1rem
+    margin: 1rem;
+}
+
+.text-div {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
 }
 
 #about-me h3 {
     margin-top: 1rem;
+    width: min-content
 }
 
 #about-me p {
     line-height: 1.3rem;
-}
-
-#about-me .text-div {
-    display: flex;
-    justify-content: space-around;
-    flex-flow: nowrap column
+    flex-shrink: 1;
 }
 
 /*MAIN ↑↑↑*/
@@ -151,15 +156,15 @@ header h2 {
 
 @media (max-width: 360px),
 (max-height: 345px) {
-    header h1 {
+    h1 {
         font-size: 4rem;
     }
 
-    header h2 {
+    h2 {
         font-size: 1.5rem;
     }
 
-    header h3 {
+    h3 {
         font-size: 1rem;
     }
 
@@ -173,7 +178,7 @@ header h2 {
     }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 1130px) {
     #about-me>div {
         flex-direction: column;
     }
