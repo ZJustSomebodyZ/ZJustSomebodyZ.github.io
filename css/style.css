@@ -30,7 +30,6 @@ body {
 }
 
 /*HEADER ↓↓↓*/
-
 header {
     color: var(--light-font-color);
     background-image: url("/img/start-backg.svg");
@@ -52,6 +51,7 @@ nav {
     width: 100%;
     position: fixed;
     height: 1.8rem;
+    z-index: 1;
 }
 
 nav>div {
@@ -87,48 +87,77 @@ header h2 {
 
 /*HEADER ↑↑↑*/
 
-/*e*/
-
 /*MAIN ↓↓↓*/
+main {
+    display: flex;
+    flex-flow: column;
+    margin: 1rem;
+    gap: 1rem;
+    justify-content: center;
+}
+
+
+
+.text-div {
+    display: flex;
+    justify-content: space-around;
+    gap: .5rem;
+    flex-flow: column;
+}
+
+/*About me*/
 #about-me {
     min-height: calc(100vh - 1.8rem);
 }
 
-#about-me-div {
+#about-me>div {
     display: flex;
     gap: 2rem;
     background-color: #262626;
     padding: 1rem;
-    margin: 2rem;
     border-radius: 5px;
     justify-content: center;
+}
+
+h2 {
+    margin-bottom: 1rem;
 }
 
 #about-me img {
     border-radius: 3px;
     box-shadow: 8px 8px #181818;
-    max-width: 80vw;
+    max-width: 90%;
     align-self: center
-}
-
-.text-div {
-    display: flex;
-    justify-content: space-around;
-    flex-flow: column;
-}
-
-#about-me h2 {
-    margin: 2rem;
 }
 
 #about-me p {
     line-height: 1.2rem;
 }
 
+/*projects*/
+#projects-div {
+    margin: 0 5vw;
+    display: flex;
+    flex-flow: column;
+    gap: 1rem;
+}
+
+.project {
+    text-align: center;
+    background-color: #262626;
+    border-radius: 5px;
+    padding: .5rem;
+    transition: .2s;
+}
+
+.project:hover {
+    background-color: #363636;
+    cursor: pointer;
+}
+
 /*MAIN ↑↑↑*/
 
 /*GENERAL ↓↓↓*/
-
 .normal-text {
     font-size: var(--normal-size);
     color: var(--light-font-color);
