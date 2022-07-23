@@ -15,7 +15,7 @@
 
 html {
     scrollbar-width: thin;
-    scroll-padding-top: 2.8rem
+    scroll-padding-top: 28.8px;
 }
 
 body {
@@ -91,11 +91,8 @@ header h2 {
 main {
     display: flex;
     flex-flow: column;
-    gap: 1rem;
     justify-content: center;
 }
-
-
 
 .text-div {
     display: flex;
@@ -106,22 +103,21 @@ main {
 
 /*About me*/
 #about-me {
-    min-height: calc(100vh - 1.8rem);
-    margin: 1rem;
-    min-height: 100vh
+    min-height: calc(100vh - 1.8rem - 28.8px);
+    padding: 1rem;
 }
 
-#about-me>div {
+h2 {
+    padding-bottom: 1rem;
+}
+
+#about-me-div {
     display: flex;
     gap: 2rem;
     background-color: #262626;
     padding: 1rem;
     border-radius: 5px;
     justify-content: center;
-}
-
-h2 {
-    margin-bottom: 1rem;
 }
 
 #about-me img {
@@ -142,7 +138,7 @@ h2 {
     background-position: center;
     background-size: cover;
     padding: 1rem;
-    min-height: 100vh;
+    min-height: calc(100vh - 1rem - 28.8px);
 }
 
 #projects-div {
@@ -150,6 +146,7 @@ h2 {
     display: flex;
     flex-flow: column;
     gap: 1rem;
+    min-height: 100vh
 }
 
 .project {
@@ -163,10 +160,6 @@ h2 {
     align-items: center;
     flex-flow: column;
     justify-content: center;
-}
-
-projects>* {
-    height: fit-content
 }
 
 .project:hover {
@@ -207,12 +200,12 @@ projects>* {
         font-size: 4rem;
     }
 
-    h2 {
+    .subtitle {
         font-size: 1.5rem;
     }
 
-    h3 {
-        font-size: 1rem;
+    .sub-subtitle {
+        font-size: 1.1rem;
     }
 
     .show-more {
@@ -224,6 +217,15 @@ projects>* {
     #about-me-div {
         margin: 1rem;
     }
+
+    #about-me-div {
+        margin: 0;
+        padding: .5rem;
+    }
+
+    h2 {
+        text-align: center;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -233,8 +235,6 @@ projects>* {
 }
 
 @keyframes appearing {
-    from {}
-
     to {
         opacity: 1;
     }
